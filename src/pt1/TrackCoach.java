@@ -18,4 +18,14 @@ public class TrackCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+	
+	//add init method
+	public void startEverything() {
+		System.out.println("execute code on bean initialization");
+	}
+	
+	//add destroy method
+	public void destroyEverything() {
+		System.out.println("execute code before the bean lifecycle ends");
+	}
 }
