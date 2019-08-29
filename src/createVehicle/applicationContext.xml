@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- load properties file (load external file to be used in program)-->
+	<context:property-placeholder location = "classpath:vehicle.properties"/>
+	
+	<!-- enable component scanning (scan classes for @Component annotation to use as bean ID) -->
+	<context:component-scan base-package="com.spring.car"></context:component-scan>
+	
+	<bean id = "myCar"
+		class ="com.spring.car.Car"
+		init-method="startApp"
+		destroy-method="killApp">
+		
+		<!-- Setter injection : literal values loaded from properties file (line 10) -->
+		
+		<!-- property name will auto append set(Name) and use the value in the class Mutator
+			e.g: setCost | setVehicle -->
+		<property name="cost" value = "${foo.cost}" ></property>
+		<property name="vehicle" value = "${foo.vehicle}"></property>
+		
+	</bean>
+	
+	<bean id = "motorcycle" 
+		class ="com.spring.car.Motorcycle"
+		init-method="startApp"
+		destroy-method="killApp">
+	
+		<!-- Setup constructor injection -->
+		<constructor-arg index = "0" value="2786.42"></constructor-arg>
+		<constructor-arg index = "1" value = "Motorcycle"></constructor-arg>
+		
+	</bean>
+	
+	<bean id = "beanTruckId"
+		class = "com.spring.car.Truck"
+		init-method = "startApp"
+		destroy-method = "killApp">
+		
+		<!-- Setup constructor injection -->
+		<constructor-arg index = "0" value = "30421.31"></constructor-arg>
+		<constructor-arg index = "1" value = "18-Wheeler"></constructor-arg>
+	
+	</bean>
+</beans>
+
+
+
+
+
