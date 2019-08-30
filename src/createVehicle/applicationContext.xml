@@ -38,16 +38,6 @@
 		
 	</bean>
 	
-	<bean id = "beanTruckId"
-		class = "com.spring.car.Truck"
-		init-method = "startApp"
-		destroy-method = "killApp">
-		
-		<!-- Setup constructor injection -->
-		<constructor-arg index = "0" value = "30421.31"></constructor-arg>
-		<constructor-arg index = "1" value = "18-Wheeler"></constructor-arg>
-	
-	</bean>
 </beans>
 
 
