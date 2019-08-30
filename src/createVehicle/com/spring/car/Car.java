@@ -1,9 +1,13 @@
 package com.spring.car;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Car implements Vehicle {
 	
 	//Instance Variables
+	@Value("${foo.cost}") //bypass the need for setter injection by using value annotation to inject properties
 	private double cost;
+	@Value("${foo.vehicle}")
 	private String vehicle;
 
 	//Accessors

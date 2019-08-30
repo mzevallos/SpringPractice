@@ -1,8 +1,10 @@
 package com.spring.car;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component // default bean id "motorcycle" - uses class name if no id is given
+@Scope("prototype") //defining scope with annotation instead of xml bean declaration - scope is singleton by default
 public class Motorcycle implements Vehicle {
 
 	private double cost;
