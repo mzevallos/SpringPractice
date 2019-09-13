@@ -11,12 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/hello") //high level mapping, parent mapping to correct error 500 from AnotherController
 public class HelloWorldController {
 	
-	//controller method to return to home
-	@RequestMapping("/homePage")
-	public String homePage() {
-		return "main-menu";
-	}
-	
 	//controller method to show initial HTML form
 	@RequestMapping("/showForm") //with addition of line 11, /showForm becomes a sub mapping /hello/showForm to remove ambiguous error in AnotherController
 	public String showForm() {
