@@ -15,7 +15,7 @@ The Message, ${nameThisWhatever}
 
 <br><br>
 
-<a href="homePage">Home Page</a>
+<a href="/spring-mvc-demo/">Home Page</a>
 </body>
 
 </html>
