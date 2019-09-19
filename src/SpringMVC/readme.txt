@@ -1,5 +1,6 @@
 NOTE**
 Running Tomcat Server and updating web app
+lib folder includes relevant .jar files & Spring and Hibernate Framework
 
 Java EE web Project
 
