@@ -1,3 +1,4 @@
+<!-- Add reference for Spring form tag library -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>

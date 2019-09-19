@@ -1,5 +1,5 @@
 <!-- references jstl tag library - allows forEach functionality -->
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="givenPrefix" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="prefixCanBeAnythingCheckLine2" %>
 
 <!DOCTYPE html>
 <html>
@@ -23,12 +23,14 @@
 		Operating Systems:
 		<ul>
 		
-			<givenPrefix:forEach var="temp" items="${modelStudentAttribute.operatingSystems}">
+			<prefixCanBeAnythingCheckLine2:forEach var="temp" items="${modelStudentAttribute.operatingSystems}">
 			
 			<li> ${temp} </li>
 			
-			</givenPrefix:forEach>
+			</prefixCanBeAnythingCheckLine2:forEach>
 			
 		</ul>
+		
+		<a href="/spring-mvc-demo/">Home Page</a>
 	</body>
 </html>
