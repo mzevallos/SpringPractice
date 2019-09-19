@@ -7,6 +7,8 @@ Java EE web Project
   [src]
     [com.springdemo.mvc]
       .java files ...
+    [resources]
+      .properties files ...
       
 [WebContent]
   [WEB-INF]
